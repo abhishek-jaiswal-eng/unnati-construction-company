@@ -1,1 +1,46 @@
-[]
+[
+  {
+    "slug": "the-aranya",
+    "name": "The Aranya",
+    "city": "Bengaluru",
+    "category": "Luxury Residences",
+    "configuration": "3, 4 & 5 BHK",
+    "landArea": "5.5 Acres",
+    "possession": "Ready 2027",
+    "description": "A premium residential enclave designed for those who seek space, serenity and sophistication.",
+    "image": "/src/assets/images/projects/project-aranya.jpg"
+  },
+  {
+    "slug": "skyline-residences",
+    "name": "Skyline Residences",
+    "city": "Mumbai",
+    "category": "Premium Apartments",
+    "configuration": "2 & 3 BHK",
+    "landArea": "3.2 Acres",
+    "possession": "Ready 2026",
+    "description": "Elevated city living with panoramic skyline views and resort-style amenities.",
+    "image": "/src/assets/images/projects/project-skyline.jpg"
+  },
+  {
+    "slug": "the-veridian",
+    "name": "The Veridian",
+    "city": "Pune",
+    "category": "Villas & Row Houses",
+    "configuration": "4 & 5 BHK",
+    "landArea": "6.8 Acres",
+    "possession": "Ready 2027",
+    "description": "Villas and row houses set within landscaped courtyards for privacy and calm.",
+    "image": "/src/assets/images/projects/project-veridian.jpg"
+  },
+  {
+    "slug": "the-zenith",
+    "name": "The Zenith",
+    "city": "Pune",
+    "category": "Villas & Row Houses",
+    "configuration": "4 & 5 BHK",
+    "landArea": "Efficiently Used",
+    "possession": "Ready 2026",
+    "description": "An exclusive collection of villas, crafted for a refined lifestyle amidst nature and luxury.",
+    "image": "/src/assets/images/projects/project-zenith.jpg"
+  }
+]
