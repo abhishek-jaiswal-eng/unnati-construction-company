@@ -1,27 +1,28 @@
+import { Link } from 'react-router-dom';
 import ImageSlot from '@/components/common/ImageSlot';
 import StatsBlock from '@/components/about/StatsBlock';
-import Button from '@/components/common/Button';
 
-export default function About() {
+export default function AboutPreview() {
   return (
-    <div className="mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+    <section className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
       <div>
         <p className="font-sans text-[12px] font-semibold uppercase tracking-widest text-accent mb-4">
           About Us
         </p>
-        <h1 className="font-display text-[40px] md:text-[48px] leading-[1.15] text-text-primary mb-6">
+        <h2 className="font-display text-[40px] md:text-[48px] leading-[1.15] text-text-primary mb-6">
           Building enduring value since 1998
-        </h1>
-        <p className="font-sans text-[16px] leading-[1.6] text-text-secondary mb-10">
+        </h2>
+        <p className="font-sans text-[16px] leading-[1.6] text-text-secondary mb-10 max-w-md">
           We are a real estate development company focused on creating thoughtfully
           designed spaces that enrich lives and build lasting value for generations.
-          Every project reflects our commitment to architectural integrity, sustainable
-          practices, and enduring craftsmanship.
         </p>
         <StatsBlock />
-        <Button variant="secondary" className="mt-10">
-          Our Journey
-        </Button>
+        <Link
+          to="/about"
+          className="inline-block mt-10 font-sans text-[13px] font-semibold uppercase tracking-wide text-text-primary underline underline-offset-4"
+        >
+          Learn More →
+        </Link>
       </div>
 
       <div className="aspect-[4/5] rounded-card overflow-hidden">
@@ -33,6 +34,6 @@ export default function About() {
           imgClassName="w-full h-full"
         />
       </div>
-    </div>
+    </section>
   );
 }
