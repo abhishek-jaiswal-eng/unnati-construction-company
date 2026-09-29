@@ -1,10 +1,13 @@
 import Button from '@/components/common/Button';
 import ImageSlot from '@/components/common/ImageSlot';
 import { useTheme } from "@/hooks/useTheme";
+import { toDriveDirectUrl } from "@/utils/driveImage"
 
 export default function Hero() {
   const { theme } = useTheme();
-  const heroImage = theme == "dark" ? "/src/assets/images/hero/hero-content-dark.png" : "/src/assets/images/hero/home-hero.png"
+  const heroImage = toDriveDirectUrl(
+    theme == "dark" ? "https://drive.google.com/file/d/1U7vmV_0b1N9azPaMMqZRdHgomGoSPAjB/view?usp=sharing" : "https://drive.google.com/file/d/1yEoT3uyM1JVsECf_EwAGc2ljhLuWkOrI/view?usp=sharing"
+  )
 
   return (
     <section className="relative h-[calc(100vh-72px)] min-h-[560px] overflow-hidden">

@@ -12,12 +12,12 @@ const NAV_LINKS = [
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-bg-primary/90 backdrop-blur-sm border-b border-border">
-      <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
+      <nav className="max-w-420 mx-auto flex items-center justify-between px-6 py-5">
         <Link
           to="/"
           className="font-sans text-sm font-bold tracking-[0.2em] text-text-primary"
         >
-          UNNATI
+          UNNATI CONSTRUCTION COMPANY
         </Link>
 
         <ul className="hidden md:flex items-center gap-8">
