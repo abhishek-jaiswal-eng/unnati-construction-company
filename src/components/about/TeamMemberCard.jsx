@@ -1,34 +1,49 @@
+import clsx from 'clsx';
 import ImageSlot from '@/components/common/ImageSlot';
 
-export default function TeamMemberCard({ member, size = 'default' }) {
-  const isFeatured = size === 'featured';
-
+export default function TeamMemberCard({ member, reverse = false, className }) {
   return (
-    <div className={isFeatured ? 'flex flex-col items-center text-center' : 'text-center'}>
-      <div
-        className={
-          isFeatured
-            ? 'w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden mb-5'
-            : 'w-28 h-28 rounded-full overflow-hidden mb-4 mx-auto'
-        }
-      >
-        <ImageSlot
-          src={member.image}
-          alt={member.name}
-          label={`Place image at:\n${member.image}`}
-          className="w-full h-full"
-          imgClassName="w-full h-full"
-        />
+    <div className={clsx('relative', className)}>
+      {/* Center axis line — hidden on mobile where columns stack */}
+      <div className="hidden sm:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-border" />
+
+      <div className="grid sm:grid-cols-2 gap-10 sm:gap-0 items-center">
+        <div
+          className={clsx(
+            'aspect-[4/5] rounded-card overflow-hidden',
+            reverse ? 'sm:order-2 sm:ml-10 md:ml-16' : 'sm:mr-10 md:mr-16'
+          )}
+        >
+          <ImageSlot
+            src={member.image}
+            alt={member.name}
+            label={`Place image at:\n${member.image}`}
+            className="w-full h-full"
+            imgClassName="w-full h-full"
+          />
+        </div>
+
+        <div
+          className={clsx(
+            reverse ? 'sm:order-1 sm:mr-10 md:mr-16 sm:text-right' : 'sm:ml-10 md:ml-16'
+          )}
+        >
+          <h3 className="font-display text-[28px] md:text-[32px] text-text-primary mb-1">
+            {member.name}
+          </h3>
+          <p className="font-sans text-[13px] font-semibold text-accent uppercase tracking-wide mb-5">
+            {member.role}
+          </p>
+          <p
+            className={clsx(
+              'font-sans text-[16px] leading-[1.7] text-text-secondary',
+              reverse ? 'sm:ml-auto' : ''
+            )}
+          >
+            {member.bio}
+          </p>
+        </div>
       </div>
-      <h3 className={isFeatured ? 'font-display text-[24px] text-text-primary' : 'font-display text-[18px] text-text-primary'}>
-        {member.name}
-      </h3>
-      <p className={isFeatured ? 'font-sans text-[13px] text-accent uppercase tracking-wide mt-1 mb-4' : 'font-sans text-[12px] text-accent uppercase tracking-wide mt-1 mb-2'}>
-        {member.role}
-      </p>
-      <p className={isFeatured ? 'font-sans text-[15px] leading-[1.6] text-text-secondary mx-auto' : 'font-sans text-[13px] leading-[1.5] text-text-secondary'}>
-        {member.bio}
-      </p>
     </div>
   );
 }

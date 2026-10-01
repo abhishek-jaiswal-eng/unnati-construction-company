@@ -8,7 +8,7 @@ export default function Journey() {
       <p className="font-sans text-[12px] font-semibold uppercase tracking-widest text-accent mb-4">
         Our Journey
       </p>
-      <h1 className="font-display text-[40px] md:text-[48px] leading-[1.15] text-text-primary mb-6 max-w-xl">
+      <h1 className="font-display text-[40px] md:text-[48px] leading-[1.15] text-text-primary mb-6">
         Milestones along the way
       </h1>
       <p className="font-sans text-[16px] leading-[1.6] text-text-secondary mb-20">

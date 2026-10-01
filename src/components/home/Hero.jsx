@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from '@/components/common/Button';
 import ImageSlot from '@/components/common/ImageSlot';
 import { useTheme } from "@/hooks/useTheme";
@@ -36,7 +37,7 @@ export default function Hero() {
           </p>
         </div>
         <div className="mt-100">
-          <Button variant="primary">
+          <Button as={Link} to='/projects' variant="primary">
             Explore Our Projects
           </Button>
         </div>

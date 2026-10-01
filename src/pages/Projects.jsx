@@ -16,10 +16,10 @@ export default function Projects() {
       <p className="font-sans text-[12px] font-semibold uppercase tracking-widest text-accent mb-4">
         Our Projects
       </p>
-      <h1 className="font-display text-[40px] md:text-[48px] leading-[1.15] text-text-primary max-w-xl mb-4">
+      <h1 className="font-display text-[40px] md:text-[48px] leading-[1.15] text-text-primary mb-4">
         Where vision meets reality
       </h1>
-      <p className="font-sans text-[16px] text-text-secondary max-w-lg mb-10">
+      <p className="font-sans text-[16px] text-text-secondary mb-10">
         A curated collection of premium residential and mixed-use developments across
         prime locations.
       </p>

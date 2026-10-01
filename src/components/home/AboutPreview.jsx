@@ -12,7 +12,7 @@ export default function AboutPreview() {
         <h2 className="font-display text-[40px] md:text-[48px] leading-[1.15] text-text-primary mb-6">
           Building enduring value since 1998
         </h2>
-        <p className="font-sans text-[16px] leading-[1.6] text-text-secondary mb-10 max-w-md">
+        <p className="font-sans text-[16px] leading-[1.6] text-text-secondary mb-10">
           We are a real estate development company focused on creating thoughtfully
           designed spaces that enrich lives and build lasting value for generations.
         </p>
