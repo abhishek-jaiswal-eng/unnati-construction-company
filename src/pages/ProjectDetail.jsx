@@ -45,7 +45,7 @@ export default function ProjectDetail() {
           {project.category}
         </p>
 
-        <p className="font-sans text-[16px] leading-[1.6] text-text-secondary max-w-2xl mb-10">
+        <p className="font-sans text-[16px] leading-[1.6] text-text-secondary mb-10">
           {project.description}
         </p>
 

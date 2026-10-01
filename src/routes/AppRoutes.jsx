@@ -5,6 +5,8 @@ import About from '@/pages/About';
 import Projects from '@/pages/Projects';
 import ProjectDetail from '@/pages/ProjectDetail';
 import Contact from '@/pages/Contact';
+import Journey from '@/pages/Journey';
+
 
 export default function AppRoutes() {
   return (
@@ -15,6 +17,7 @@ export default function AppRoutes() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:slug" element={<ProjectDetail />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/journey" element={<Journey />} />
       </Route>
     </Routes>
   );

@@ -13,7 +13,7 @@ export default function FeaturedProjects() {
             <p className="font-sans text-[12px] font-semibold uppercase tracking-widest text-accent mb-4">
               Our Projects
             </p>
-            <h2 className="font-display text-[40px] md:text-[48px] leading-[1.15] text-text-primary max-w-lg">
+            <h2 className="font-display text-[40px] md:text-[48px] leading-[1.15] text-text-primary">
               Iconic spaces. Lasting legacies.
             </h2>
           </div>

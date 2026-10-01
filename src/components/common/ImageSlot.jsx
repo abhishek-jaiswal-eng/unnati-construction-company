@@ -2,15 +2,17 @@ import { useState } from 'react';
 import { ImageOff } from 'lucide-react';
 import clsx from 'clsx';
 
-/**
- * Drop-in image component for Phase 1.
- * - If `src` loads successfully, renders the real image.
- * - If `src` is missing or 404s, renders a clearly labeled placeholder
- *   showing the exact filename expected, so dropping the real file into
- *   that path (see README-IMAGES.md) makes it "just work" with no code change.
- */
-export default function ImageSlot({ src, alt = '', label, className, imgClassName }) {
+export default function ImageSlot({
+  src,
+  alt = '',
+  label,
+  className,
+  imgClassName,
+  loading = 'lazy',
+  sizes,
+}) {
   const [failed, setFailed] = useState(false);
+
   const showPlaceholder = !src || failed;
 
   if (showPlaceholder) {
@@ -23,6 +25,7 @@ export default function ImageSlot({ src, alt = '', label, className, imgClassNam
         )}
       >
         <ImageOff size={20} />
+
         <span className="font-sans text-[10px] uppercase tracking-wide leading-relaxed">
           {label || 'Image placeholder'}
         </span>
@@ -34,7 +37,12 @@ export default function ImageSlot({ src, alt = '', label, className, imgClassNam
     <img
       src={src}
       alt={alt}
-      className={clsx('block w-full h-full object-cover', imgClassName)}
+      loading={loading}
+      sizes={sizes}
+      className={clsx(
+        'block w-full h-full object-cover',
+        imgClassName
+      )}
       onError={() => setFailed(true)}
     />
   );
